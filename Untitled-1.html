@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kasir</title>
+  </head>
+  <body>
+    <script>
+      function hitungDiskon(totalBelanja){
+        if(totalBelanja >= 200000){
+          return totalBelanja * 0.2;
+        } else if(totalBelanja >= 100000){
+          return totalBelanja * 0.1;
+        } else {
+          return 0;
+        }
+      }
+
+      var namaPembeli = prompt("Nama Pembeli:");
+      var namaBarang1 = prompt("Nama Barang 1:");
+      var hargaBarang1 = Number(prompt("Harga Barang 1:"));
+      var namaBarang2 = prompt("Nama Barang 2:");
+      var hargaBarang2 = Number(prompt("Harga Barang 2:"));
+
+      var totalBelanja = hargaBarang1 + hargaBarang2;
+      var nominalDiskon = hitungDiskon(totalBelanja);
+      var totalBayar = totalBelanja - nominalDiskon;
+    
+
+      document.write("<h1>aplikasi kasir elektronik</h1>");
+      document.write("<h2>==________________==</h2>");
+      document.write("<h3>struk toko elektronik rpl</h3>");
+      document.write("Nama Pembeli  : " + namaPembeli + "<br>");
+      document.write("Barang 1  : " + namaBarang1 + " - Rp " + hargaBarang1 + "<br>");
+      document.write("Barang 2  : " + namaBarang2 + " - Rp " + hargaBarang2 + "<br><br>");
+      document.write("Total Belanja : Rp " + totalBelanja + "<br>");
+      document.write("Diskon  : Rp " + nominalDiskon + "<br>");
+      document.write("Total Bayar : Rp " + totalBayar + "<br>");
+    </script>
+  </body>
+</html>
